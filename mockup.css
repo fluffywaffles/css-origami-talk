@@ -2,13 +2,14 @@ body {
   font-family: bebas-neue;
   font-size: 20px;
   text-shadow: 0 1px rgba(0,0,0,0.15);
+  margin: 0;
 }
 
 * {
   transition: all ease 1s;
 }
 
-.popover {
+.popover, .popover-shadow {
   background: white;
   width: 150px;
   height: 60px;
@@ -21,7 +22,13 @@ body {
   display: inline-table;
 }
 
-.popover:after {
+.popover-shadow {
+  background: rgba(0,0,0,0.1);
+  box-shadow: none;
+}
+
+
+.popover:after, .popover-shadow:after {
   content: '';
   display: block;
   position: absolute;
@@ -31,6 +38,10 @@ body {
   border-width: 15px;
   border-style: solid;
   border-color: white transparent transparent transparent;
+}
+
+.popover-shadow:after {
+  border-color: rgba(0,0,0,0.1) transparent transparent transparent;
 }
 
 .popover p {
@@ -149,44 +160,44 @@ body {
    * 80px main  (255, 192, 0)
    */
   height: 720px;
-  width: 10px;
+  width: 20px;
   position: absolute;
   top: 0;
-  background: linear-gradient(to bottom, rgb(255, 220, 0)  60px,
-                                         rgb(255, 210, 50) 60px,
-                                         rgb(255, 210, 50) 63px,
-                                         rgb(255, 248, 0)  63px,
-                                         rgb(255, 248, 0) 183px,
-                                         rgb(255, 255, 0) 183px,
-                                         rgb(255, 255, 0) 189px,
-                                         rgb(255, 235, 0) 189px,
-                                         rgb(255, 235, 0) 639px,
-                                         rgb(255, 220, 0) 639px,
-                                         rgb(255, 220, 0) 642px,
-                                         rgb(255, 192, 0) 642px);
+  background: linear-gradient(to bottom, rgb(245, 220, 0)  60px,
+                                         rgb(245, 210, 50) 60px,
+                                         rgb(245, 210, 50) 63px,
+                                         rgb(245, 248, 0)  63px,
+                                         rgb(245, 248, 0) 183px,
+                                         rgb(245, 255, 0) 183px,
+                                         rgb(245, 255, 0) 189px,
+                                         rgb(245, 235, 0) 189px,
+                                         rgb(245, 235, 0) 639px,
+                                         rgb(255, 200, 0) 639px,
+                                         rgb(255, 200, 0) 642px,
+                                         rgb(245, 192, 0) 642px);
 }
 
 .edge.left {
-  left: -10px;
+  left: -19px;
 }
 
 .edge.right {
-  right: -10px;
+  right: -19px;
 }
 
 .edge.bottom, .edge.top {
   width: 400px;
-  height: 10px;
+  height: 20px;
   position: absolute;
   left: 0;
 }
 
 .edge.bottom {
-  background: rgb(255, 192, 0);
-  bottom: -10px;
+  background: rgb(245, 192, 0);
+  bottom: -19px;
 }
 
 .edge.top {
-  background: rgb(255, 220, 0);
-  top: -10px;
+  background: rgb(245, 220, 0);
+  top: -19px;
 }

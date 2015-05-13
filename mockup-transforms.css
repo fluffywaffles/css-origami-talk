@@ -8,30 +8,40 @@
 
 body {
   /* Don't forget perspective! */
+  perspective: 5000px;
 }
 
 .mockup {
   /* If the mockup doesn't fit on your screen, scale it down until it does. */
-  transform: scale(1.0);
+  transform: scale(1.0) rotateX(60deg) rotateZ(-40deg) rotateY(-5deg);
   /* No more hints. (Unless you ask nicely. ;) ) */
 }
 
-.edge.left {
+.mockup {
+  transform-style: preserve-3d;
+}
 
+.edge.left {
+  transform-origin: right center;
+  transform: rotateY(-90deg);
 }
 
 .edge.right {
-
+  transform-origin: left center;
+  transform: rotateY(90deg);
 }
 
 .edge.top {
-
+  transform-origin: bottom center;
+  transform: rotateX(90deg);
 }
 
 .edge.bottom {
-
+  transform-origin: top center;
+  transform: rotateX(-90deg);
 }
 
 .popover {
-
+  transform: translateZ(40px);
+  border: 1px solid rgb(240, 240, 240);
 }
