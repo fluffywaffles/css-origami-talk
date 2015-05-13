@@ -22,6 +22,7 @@ body {
   transform: rotateY(-10deg) rotateX(-20deg) rotateZ(5deg);
 
   -webkit-animation: spin linear 5s infinite;
+  -webkit-animation-timing-function: cubic-bezier(.57, -0.46, .49, 1.47);
 }
 
 .top {
