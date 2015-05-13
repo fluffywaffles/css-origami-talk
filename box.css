@@ -1,0 +1,32 @@
+.box, .front, .back, .left, .right, .bottom, .top {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background: rgb(117, 65, 199);
+  transition: all ease 1s;
+}
+
+.box {
+  top: 300px;
+  left: 300px;
+}
+
+.top {
+  bottom: 100px;
+}
+
+.bottom {
+  top: 100px;
+}
+
+.back {
+  top: 200px
+}
+
+.left {
+  right: 100px;
+}
+
+.right {
+  left: 100px;
+}
