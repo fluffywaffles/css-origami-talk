@@ -1,0 +1,13 @@
+@-webkit-keyframes spin {
+  from {
+    transform: rotateY(-10deg) rotateX(-20deg) rotateZ(5deg);
+  }
+
+  50% {
+    transform: rotateY(350deg) rotateX(-20deg) rotateZ(-30deg);
+  }
+
+  to {
+    transform: rotateY(710deg) rotateX(-20deg) rotateZ(5deg);
+  }
+}
